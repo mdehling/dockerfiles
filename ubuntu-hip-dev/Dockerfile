@@ -1,4 +1,4 @@
-FROM docker.io/mdehling/ubuntu-cuda-dev:2024.02.01
+FROM docker.io/mdehling/ubuntu-cuda-dev:2024.02.05
 
 ARG kr_url="https://repo.radeon.com/rocm/rocm.gpg.key"
 ARG kr_dir="/etc/apt/keyrings"
@@ -18,4 +18,4 @@ RUN apt-get -y install rocm-hip-sdk
 RUN echo "/opt/rocm/lib\n/opt/rocm/lib64" | tee -a /etc/ld.so.conf.d/rocm.conf
 RUN ldconfig
 
-ENV PATH=$PATH:/opt/rocm/bin:/usr/local/cuda/bin
+ENV PATH=/opt/rocm/bin:$PATH
