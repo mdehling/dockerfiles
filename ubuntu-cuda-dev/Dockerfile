@@ -7,6 +7,7 @@ RUN apt-get update
 
 ARG cuda_version='cuda11.8'
 ARG cudnn_version='8.9.7.29-1'
+RUN apt-get -y install libcudnn8=${cudnn_version}+${cuda_version}
 RUN apt-get -y install libcudnn8-dev=${cudnn_version}+${cuda_version}
 RUN apt-get -y install cuda-toolkit-11-8
 
