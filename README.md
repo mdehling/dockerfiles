@@ -4,6 +4,10 @@ To update, enter subdirectory and run, e.g., the following:
     $ docker build -t mdehling/ms-python-extra:1-3.10 .
     $ docker push mdehling/ms-python-extra:1-3.10
 
+The first time, you will have to authenticate with docker:
+
+    $ docker login -u $DOCKER_USER -p $DOCKER_ACCESS_TOKEN
+
 FYI, this is my current build system:
 
     $ uname -a
